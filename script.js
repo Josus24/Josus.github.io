@@ -4,7 +4,7 @@
 function createHeart() {
     const heart = document.createElement('i');
     heart.classList.add('fas', 'fa-heart');
-    heart.style.color = '#ccc'; // Очень светлый цвет
+    heart.style.color = '#e7dada'; // Очень светлый розовый
     heart.style.fontSize = `${Math.random() * 5 + 1}rem`; // Меньше размер
     heart.style.position = 'absolute';
     heart.style.left = `${Math.random() * 100}%`;
