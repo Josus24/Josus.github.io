@@ -1,4 +1,6 @@
 // script.js
+
+// Анимация падающих сердечек
 function createHeart() {
     const heart = document.createElement('i');
     heart.classList.add('fas', 'fa-heart');
@@ -21,9 +23,8 @@ function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)];
 }
 
-setInterval(createHeart, 500); // Создаем новое сердце каждые 500 мс
+setInterval(createHeart, 500);
 
-// Анимация для падения сердечек
 const heartAnimation = `
     @keyframes fall {
         0% { transform: translateY(-50px); }
@@ -31,3 +32,8 @@ const heartAnimation = `
     }
 `;
 document.head.appendChild(document.createElement('style')).textContent = heartAnimation;
+
+// Интерактивность кнопки "Спасибо"
+document.getElementById('thankButton').addEventListener('click', () => {
+    document.getElementById('hiddenMessage').style.display = 'block';
+});
