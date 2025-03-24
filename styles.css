@@ -2,11 +2,34 @@
 body {
     font-family: 'Pacifico', cursive; /* Новый шрифт */
     text-align: center;
-    background-color: #c57a50; /* Оранжевый фон */
-    color: #f0cfa2; /* Белый текст */
     margin: 0;
     padding: 0;
     overflow-y: auto; /* Включаем вертикальную прокрутку */
+    color: #f0cfa2; /* Белый текст */
+
+    /* Анимированный фон */
+    background: linear-gradient(270deg, #ff6b6b, #ff4d4d, #ffa500, #ff6b6b);
+    background-size: 300% 300%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+/* Анимация для фона */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Анимация исчезновения начального экрана */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Анимация появления основного контента */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .centered {
@@ -46,9 +69,25 @@ body {
     transform: scale(1.05); /* Мягкое увеличение при наведении */
 }
 
+/* Начальный экран */
+#startScreen {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Плавное исчезновение начального экрана */
+.fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+}
+
+/* Плавное появление основного контента */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
 header {
     padding: 20px;
-    background-color: #864d39; /* Темно-коричневый фон */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для контрастности */
     color: #f0cfa2; /* Белый текст */
 }
 
@@ -60,6 +99,9 @@ header {
 
 main {
     padding: 20px; /* Уменьшаем отступы для мобильных устройств */
+    background-color: rgba(0, 0, 0, 0.3); /* Полупрозрачный фон для контрастности */
+    border-radius: 10px;
+    margin: 20px;
 }
 
 h1 {

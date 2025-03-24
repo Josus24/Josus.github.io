@@ -59,8 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // При нажатии на "Да"
     yesButton.addEventListener('click', () => {
-        startScreen.style.display = 'none'; // Скрываем начальный экран
-        mainContent.style.display = 'block'; // Показываем основной контент
+        // Добавляем класс для анимации исчезновения
+        startScreen.classList.add('fade-out');
+
+        // После завершения анимации скрываем начальный экран и показываем основной контент
+        setTimeout(() => {
+            startScreen.style.display = 'none'; // Скрываем начальный экран
+            mainContent.style.display = 'block'; // Показываем основной контент
+        }, 1000); // Время анимации (1 секунда)
     });
 
     // При наведении на "Нет"

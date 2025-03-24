@@ -12,48 +12,48 @@
 <body>
 <!-- Начальный экран -->
 <div id="startScreen" class="centered">
-<h1>Ты любишь меня?</h1>
-<div class="buttons">
-<button id="yesButton">❤️ Да ❤️</button>
-<button id="noButton">💔 Нет 💔</button>
-</div>
+    <h1>Ты любишь меня?</h1>
+    <div class="buttons">
+        <button id="yesButton">❤️ Да ❤️</button>
+        <button id="noButton">💔 Нет 💔</button>
+    </div>
 </div>
 
 <!-- Основной контент (скрытый по умолчанию) -->
-<div id="mainContent" style="display: none;">
-<!-- Шапка -->
-<header>
-<h1><img src="https://media.tenor.com/IYbJMQnWOyUAAAAj/myaowl-cute.gif" alt="Гифка" class="header-gif"> Поздравляю с 4-летием наших отношений! <img src="https://media.tenor.com/IYbJMQnWOyUAAAAj/myaowl-cute.gif" alt="Гифка" class="header-gif"></h1>
-</header>
+<div id="mainContent" class="fade-in" style="display: none;">
+    <!-- Шапка -->
+    <header>
+        <h1><img src="https://media.tenor.com/IYbJMQnWOyUAAAAj/myaowl-cute.gif" alt="Гифка" class="header-gif"> Поздравляю с 4-летием наших отношений! <img src="https://media.tenor.com/IYbJMQnWOyUAAAAj/myaowl-cute.gif" alt="Гифка" class="header-gif"></h1>
+    </header>
 
-<!-- Основное содержание -->
-<main>
-<section id="introduction">
-<p>Отношения начались <strong>24 марта 2021 года</strong>. С тех пор прошло:</p>
-<div id="timePassed" class="date-box"></div>
-</section>
+    <!-- Основное содержание -->
+    <main>
+        <section id="introduction">
+            <p>Отношения начались <strong>24 марта 2021 года</strong>. С тех пор прошло:</p>
+            <div id="timePassed" class="date-box"></div>
+        </section>
 
-<section id="gratitude">
-<h2>Спасибо за каждый момент рядом:</h2>
-<p>За твою поддержку, терпение и любовь. Ты — мой лучший человек.</p>
-<img src="https://i.pinimg.com/736x/f0/72/0d/f0720db7cab8d12b78762b1438f3a85c.jpg" alt="Милая картинка" class="meme-image">
-<button id="loveButton">❤️ Нажми меня! ❤️</button>
-<p id="clickCounter">Количество нажатий: <span id="counterValue">0</span></p>
-</section>
-</main>
+        <section id="gratitude">
+            <h2>Спасибо за каждый момент рядом:</h2>
+            <p>За твою поддержку, терпение и любовь. Ты — мой лучший человек.</p>
+            <img src="https://i.pinimg.com/736x/f0/72/0d/f0720db7cab8d12b78762b1438f3a85c.jpg" alt="Милая картинка" class="meme-image">
+            <button id="loveButton">❤️ Нажми меня! ❤️</button>
+            <p id="clickCounter">Количество нажатий: <span id="counterValue">0</span></p>
+        </section>
+    </main>
 
-<!-- Подвал -->
-<footer>
-<p>❤️ Люблю тебя ❤️.</p>
-</footer>
+    <!-- Подвал -->
+    <footer>
+        <p>❤️ Люблю тебя ❤️.</p>
+    </footer>
 
-<!-- Контейнер для анимации гифок -->
-<div class="kitty-container"></div>
-<!-- Контейнер для салюта -->
-<div class="fireworks-container"></div>
+    <!-- Контейнер для анимации гифок -->
+    <div class="kitty-container"></div>
+    <!-- Контейнер для салюта -->
+    <div class="fireworks-container"></div>
 
-<!-- Аудио для салюта -->
-<audio id="explosionSound" src="explosion.wav"></audio>
+    <!-- Аудио для салюта -->
+    <audio id="explosionSound" src="explosion.wav"></audio>
 </div>
 
 <!-- Подключение JavaScript -->
